@@ -902,7 +902,6 @@ function handleItemInteraction(itemName) {
     if (now - lastTap < 300) {
         // DOUBLE TAP -> CONSUME
         consumeItem(itemName);
-        playSfx('consume');
     } else {
         // SINGLE TAP -> SHOW DEFINITION
         // We use a small timeout to ensure we aren't about to double tap
@@ -942,7 +941,6 @@ function consumeItem(itemName) {
         render('cargo'); 
     }
 }
-
     // --- TAB RENDERING ---
     function render(tab) {
     const cont = document.getElementById('main-content');
