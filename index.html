@@ -72,17 +72,6 @@
             padding: 40px;
             text-align: center;
         }
-        .lb-trend {
-            font-size: 0.8rem;
-            width: 25px;
-            text-align: center;
-            margin-right: 10px;
-        }
-
-        .trend-up { color: #00ff88; text-shadow: 0 0 5px #00ff8855; }
-        .trend-down { color: #ff4444; text-shadow: 0 0 5px #ff444455; }
-        .trend-new { color: var(--accent); opacity: 0.6; }
-        .trend-stable { color: #444; }
 
         .btn-group {
             display: flex;
@@ -227,39 +216,6 @@
     position: relative;
     overflow: hidden;
 }
-        /* The Pop-up Overlay */
-#profile-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 1000;
-    justify-content: center; align-items: center;
-    backdrop-filter: blur(5px);
-}
-
-.profile-card {
-    background: #111;
-    border: 1px solid var(--accent);
-    padding: 20px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 0 20px var(--accent-low);
-}
-
-.profile-card h2 { color: var(--accent); margin-bottom: 5px; text-transform: uppercase; }
-.profile-card p { margin: 10px 0; color: #bbb; font-family: 'Courier New', monospace; }
-.profile-card .stat-val { color: #fff; font-weight: bold; }
-
-.close-btn {
-    margin-top: 15px;
-    background: transparent;
-    border: 1px solid #444;
-    color: #888;
-    padding: 5px 15px;
-    cursor: pointer;
-}
-.close-btn:hover { border-color: var(--accent); color: white; }
 
 .lb-item.is-me {
     border-color: var(--accent);
@@ -292,26 +248,6 @@
     font-family: 'JetBrains Mono';
     font-weight: bold;
     color: var(--accent);
-}
-        /* Penalty Glitch Effect */
-.penalty-bg {
-    animation: penalty-flash 0.5s infinite;
-    background: rgba(255, 0, 0, 0.2) !important;
-}
-
-@keyframes penalty-flash {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-.penalty-text {
-    color: var(--danger);
-    font-family: 'JetBrains Mono';
-    text-shadow: 0 0 15px rgba(255, 62, 62, 0.8);
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
 }
 
 /* Top 3 Glow */
@@ -389,17 +325,6 @@
     </style>
 </head>
 <body>
-    <div id="profile-overlay" onclick="closeProfile()">
-        <div class="profile-card" onclick="event.stopPropagation()">
-            <small style="color:var(--accent); opacity:0.5;">- HUNTER DATA -</small>
-            <h2 id="p-name">---</h2>
-            <hr style="border:0; border-top:1px solid #333; margin:15px 0;">
-            <p>LEVEL: <span id="p-level" class="stat-val">0</span></p>
-            <p>EXP: <span id="p-exp" class="stat-val">0</span></p>
-            <p>STREAK: <span id="p-streak" class="stat-val">0</span> DAYS</p>
-            <button class="close-btn" onclick="closeProfile()">CLOSE</button>
-        </div>
-    </div>
 
 <div class="app-container">
     <div id="notice-overlay" class="overlay">
@@ -473,13 +398,12 @@ function playSfx(type) {
 }
     // --- FIREBASE CONFIG ---
     const firebaseConfig = {
-        apiKey: "AIzaSyCcDK1vAOF0qGtG4GOMtvAH9DZk_I_1q1M",
-  authDomain: "levelling-testing.firebaseapp.com",
-  projectId: "levelling-testing",
-  storageBucket: "levelling-testing.firebasestorage.app",
-  messagingSenderId: "495342084106",
-  appId: "1:495342084106:web:d5de06a297830d56fbfff3",
-  measurementId: "G-FPG37PME66"
+        apiKey: "AIzaSyBBveJmrWxVnnalA34G7KZR6COhrOcxiok",
+        authDomain: "solo-levelling-system-5edae.firebaseapp.com",
+        projectId: "solo-levelling-system-5edae",
+        storageBucket: "solo-levelling-system-5edae.firebasestorage.app",
+        messagingSenderId: "800420338485",
+        appId: "1:800420338485:web:faa95b0a692fe9abb8ca7c"
     };
 
     firebase.initializeApp(firebaseConfig);
@@ -1006,17 +930,6 @@ function consumeItem(itemName) {
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
